@@ -5,79 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portafolio | Christian Madrid Cano {m}dev </title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #111; color: #eee; text-align: center; }
-    header { padding: 40px 0; background: #222; }
-    h1 { color: #00ffb3; }
-    section { max-width: 800px; margin: 40px auto; }
-    a { color: #00ffb3; text-decoration: none; }
-    footer { background: #222; padding: 20px; font-size: 14px; }
-    ul li {
-  margin: 12px 0;
-  background: #1a1a1a;
-  padding: 10px;
-  border-radius: 8px;
-  transition: background 0.3s;
-}
-ul li:hover {
-  background: #00ffb320;
-}
+    /* Resetear márgenes y paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Fondo y texto principal */
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
+    }
+
+    /* Contenedor central */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Estilos de header */
+    header {
+      text-align: center;
+      padding: 40px 0;
+      background: #222;
+      border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+      color: #00ffb3;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    /* Estilo imagen */
+    header img {
+      border-radius: 50%;
+      margin-top: 20px;
+      width: 180px;
+      height: 180px;
+    }
+
+    /* Sección general */
+    section {
+      margin-bottom: 50px;
+    }
+
     h2 {
-  color: #00ffb3;
-  border-bottom: 2px solid #00ffb3;
-  display: inline-block;
-  padding-bottom: 5px;
-  margin-bottom: 20px;
-}
+      color: #00ffb3;
+      border-bottom: 2px solid #00ffb3;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
 
-p {
-  line-height: 1.6;
-}
+    p {
+      font-size: 1.1rem;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    a {
+      color: #00ffb3;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
 
-section {
-  animation: fadeIn 1s ease-in-out;
-}
+    a:hover {
+      text-decoration: underline;
+      color: #00ffb3;
+    }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    /* Lista de proyectos */
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
 
+    ul li {
+      background: #1a1a1a;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+      background: #00ffb320;
+    }
+
+    /* Footer */
+    footer {
+      background: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    /* Animación fadeIn */
+    section {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      ul li {
+        padding: 10px;
+      }
+
+      footer {
+        font-size: 0.8rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1> Hola, soy Christian Madrid Cano</h1>
-    <p>Desarrollador Full-Stack | Freelance</p>
-    <p>🇨🇱 - 🇪🇸</p>
-    <img src="foto-perfil.png" alt="Christian Madrid" width="180" style="border-radius:50%; margin-top:20px;">
-  </header>
-  <section>
-  <h2>Sobre mí</h2>
-  <p>Soy un desarrollador full-stack freelance con experiencia en la creación de sistemas web, 
-  integraciones API y soluciones automatizadas. Trabajo con tecnologías como JavaScript, React, React Native, Node.js, 
-  Python y PHP, priorizando escalabilidad, rendimiento y diseño funcional.</p>
-</section>
 
-  <section>
-    <h2>Proyectos Destacados</h2>
-    <ul style="list-style:none;">
-      <li><a href="https://github.com/christianmadridcano/proyecto1">Sistema de Comunicación Masiva (Eter)</a></li>
-      <li><a href="https://github.com/christianmadridcano/proyecto1">Sistema de Cobranzas (Cobratsu)</a></li>
-      <li><a href="https://github.com/christianmadridcano/proyecto2">Landing Page React – Ophidia</a></li>
-      <li><a href="https://github.com/christianmadridcano/proyecto3">IVR Dinámico con Asterisk</a></li>
-    </ul>
-  </section>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Hola, soy Christian Madrid Cano</h1>
+      <p>Desarrollador Full-Stack | Freelance</p>
+      <p>🇨🇱 - 🇪🇸</p>
+      <img src="foto-perfil.png" alt="Christian Madrid" width="180" />
+    </header>
 
-  <section>
-    <h2>Contacto</h2>
-    <p>🔗<a href="mailto:christianmadridcano@gmail.com">Mail</a></p>
-    <p>🔗<a href="https://wa.me/56941075184">WhatsApp</a></p>
-  </section>
+    <!-- Sobre mí -->
+    <section>
+      <h2>Sobre mí</h2>
+      <p>Soy un desarrollador full-stack freelance con experiencia en la creación de sistemas web, integraciones API y soluciones automatizadas. Trabajo con tecnologías como JavaScript, React, React Native, Node.js, Python y PHP, priorizando escalabilidad, rendimiento y diseño funcional.</p>
+    </section>
 
-  <footer>© 2023 Christian Madrid Cano {m}dev — Todos los derechos reservados</footer>
+    <!-- Proyectos destacados -->
+    <section>
+      <h2>Proyectos Destacados</h2>
+      <ul>
+        <li><a href="https://github.com/christianmadridcano/proyecto1">Sistema de Comunicación Masiva (Eter)</a></li>
+        <li><a href="https://github.com/christianmadridcano/proyecto1">Sistema de Cobranzas (Cobratsu)</a></li>
+        <li><a href="https://github.com/christianmadridcano/proyecto2">Landing Page React – Ophidia</a></li>
+        <li><a href="https://github.com/christianmadridcano/proyecto3">IVR Dinámico con Asterisk</a></li>
+      </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section>
+      <h2>Contacto</h2>
+      <p>🔗 <a href="mailto:christianmadridcano@gmail.com">Mail</a></p>
+      <p>🔗 <a href="https://wa.me/56941075184">WhatsApp</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      © 2023 Christian Madrid Cano {m}dev — Todos los derechos reservados
+    </footer>
+  </div>
+
 </body>
 </html>
+
