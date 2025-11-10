@@ -48,10 +48,12 @@
 
     /* Estilo imagen */
     header img {
-      border-radius: 50%;
-      margin-top: 20px;
-      width: 180px;
-      height: 180px;
+      display: block;
+      margin: 20px auto 0;
+      width: clamp(140px, 22vw, 220px); /* responsivo */
+      height: auto;                      /* clave: NO forzar altura */
+      image-rendering: pixelated;         /* nítido en pixel art */
+      image-rendering: crisp-edges;
     }
 
     /* Sección general */
@@ -157,8 +159,8 @@
     <header>
       <h1>Hola, soy Christian Madrid Cano</h1>
       <p>Desarrollador Full-Stack | Freelance</p>
-      <p>🇨🇱 - 🇪🇸</p>
-      <img src="foto-perfil.png" alt="Christian Madrid" width="180" />
+      <p>🇨🇱 | 🇪🇸</p>
+      <img src="foto-perfil.png" alt="Christian Madrid" />
     </header>
 
     <!-- Sobre mí -->
@@ -193,4 +195,3 @@
 
 </body>
 </html>
-
